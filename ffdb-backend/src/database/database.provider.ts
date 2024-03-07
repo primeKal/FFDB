@@ -1,4 +1,7 @@
 import { Sequelize } from 'sequelize-typescript';
+import { Story } from 'src/stories/stories.entity';
+import { Testimony } from 'src/testimonies/testimonyies.entity';
+import { User } from 'src/users/users.entity';
 
 export const databaseProviders = [
     {
@@ -16,7 +19,7 @@ export const databaseProviders = [
                     ssl: true
                 }
             });
-            sequelize.addModels([]);
+            sequelize.addModels([User, Story, Testimony]);
             await sequelize.sync({ alter: true });
             return sequelize;
         },

@@ -4,9 +4,11 @@ import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
 import { ConfigModule } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
+import { TestimoniesModule } from './testimonies/testimonies.module';
+import { StoriesModule } from './stories/stories.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), DatabaseModule, UsersModule],
+  imports: [ConfigModule.forRoot(), DatabaseModule, UsersModule, TestimoniesModule, StoriesModule],
   controllers: [AppController],
   providers: [AppService],
 })

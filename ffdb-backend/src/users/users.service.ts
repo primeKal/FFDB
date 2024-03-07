@@ -1,9 +1,10 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { User } from './users.entity';
+import { USER_REPOSITORY } from 'src/utils/constants';
 
 @Injectable()
 export class UsersService {
-    constructor(@Inject("user_repo") private readonly usersRepository: typeof User) { }
+    constructor(@Inject(USER_REPOSITORY) private readonly usersRepository: typeof User) { }
 
     async getAllUsers(): Promise<User[]> {
         return await this.usersRepository.findAll()
