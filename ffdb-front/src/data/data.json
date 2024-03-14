@@ -4,7 +4,7 @@
     "paragraph": "Each and every sacrifice remembered, heros martyrs forever embedded in our heart and souls"
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "We are a group of young professionals that want to help the world become a better place. We use our technical skills to help register the entire casuality of this world's wars",
     "Why": [
       "Lorem ipsum dolor",
       "Tempor incididunt",
@@ -67,29 +67,29 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-newspaper-o",
+      "name": "Hero Registration",
+      "text": "Heros need to be remembered and we need some where to store their amazing stories."
     },
     {
-      "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-archive",
+      "name": "Stories",
+      "text": "We have a large number of stories for you to browse through, these are real and are the ones that show real goodness in the world."
     },
     {
       "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "name": "Testimonies",
+      "text": "Real world accounts of the brutality of war can be read here.It is one of the worst testimonies you would find on the internet, but at least its true."
     },
     {
       "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "name": "Projects",
+      "text": "Check our real world projects that are helping the war throne Regions of Tigray ."
     },
     {
       "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "name": "Donations and Support",
+      "text": "Use one of our donation links to help support our cause, which in turn will help us in a number of ways."
     },
     {
       "icon": "fa fa-pie-chart",
