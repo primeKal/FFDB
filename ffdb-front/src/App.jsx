@@ -11,7 +11,6 @@ import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
-import { BrowserRouter, Route } from 'react-router-dom';
 import Heros from './pages/Heros'
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
