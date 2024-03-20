@@ -1,6 +1,25 @@
 import React from "react";
+import { Link, useNavigate  } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
 
 export const Navigation = (props) => {
+  const isLoggedIn = useSelector(state => state.loggedInStatus.isLoggedIn);
+  const userData = useSelector(state => state.loggedInStatus.userData);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
+
+  const handleLogout = (e) => {
+    e.preventDefault(); // Prevent the default action of the Link
+    // Dispatch a logout action
+    dispatch({ type: 'LOGOUT' });
+    // Navigate to the login page or any other page after logout
+    navigate('/login')
+ };
+ const handleLinkClick = (e) => {
+ }
+
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -18,7 +37,7 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-            Freedom Fighter DB
+            FFDB
           </a>{" "}
         </div>
 
@@ -38,30 +57,37 @@ export const Navigation = (props) => {
               </a>
             </li> */}
             <li>
-              <a href="#services" className="page-scroll">
-                Services
-              </a>
+              <Link to="/" className="page-scroll">
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#portfolio" className="page-scroll">
+              <Link to="/heros" className="page-scroll">
                 Heroes
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#testimonials" className="page-scroll">
+              <Link to="/testimonials" className="page-scroll">
                 Testimonials
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#team" className="page-scroll">
+              <Link to="/stories" className="page-scroll">
                 Stories
-              </a>
+              </Link>
             </li>
-            {/* <li>
-              <a href="#contact" className="page-scroll">
-                Contact
-              </a>
-            </li> */}
+            { !isLoggedIn &&             <li>
+            <Link to="/login">Login</Link>
+            </li>}
+            {
+              isLoggedIn && 
+              <div>
+                Hi, {userData.name}
+                <li>
+                <Link onClick={handleLogout}>Log Out</Link>
+              </li>
+              </div>
+            }
           </ul>
         </div>
       </div>

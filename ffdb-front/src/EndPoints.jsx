@@ -1,0 +1,1 @@
+export const baseUrl = process.env.BASEURL? process.env.BASEURL : "http://localhost:8000/"
