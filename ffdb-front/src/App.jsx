@@ -4,13 +4,13 @@ import { Testimonials } from "./components/testimonials";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
-import Heros from './pages/Heros'
+import Heros from './pages/Heros/Heros'
 import { BrowserRouter,Route, Routes } from 'react-router-dom';
 import Home from "./pages/Home";
 import Login from "./pages/PreAuth/Login";
 import SignUp from "./pages/PreAuth/Signup";
-import Stories from "./pages/Stories";
-import Testimonies from "./pages/Testimonies"
+import Stories from "./pages/Stories/Stories";
+import Testimonies from "./pages/Testimonies//Testimonies"
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,

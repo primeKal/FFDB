@@ -37,7 +37,7 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-            FFDB
+            Freedom Fighter DB
           </a>{" "}
         </div>
 
@@ -81,12 +81,12 @@ export const Navigation = (props) => {
             </li>}
             {
               isLoggedIn && 
-              <div>
-                Hi, {userData.name}
-                <li>
-                <Link onClick={handleLogout}>Log Out</Link>
+              // <div className="logged-in">
+              <li>
+                <Link className="page-scroll" onClick={handleLogout}>Hi, {userData.name}</Link>
+                {/* <Link onClick={handleLogout} className="page-scroll">Log Out</Link> */}
               </li>
-              </div>
+              // </div>
             }
           </ul>
         </div>

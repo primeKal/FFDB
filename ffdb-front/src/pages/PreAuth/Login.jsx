@@ -56,6 +56,7 @@ function Login() {
  };
 
  return (
+  <div className='center-login'>
     <form className="login-form" onSubmit={handleSubmit}>
       <label htmlFor="email">Email:</label>
       <input type="email" id="email" ref={emailRef} required />
@@ -68,6 +69,7 @@ function Login() {
         Or <Link to="/signup">Sign Up</Link>
       </div>
     </form>
+  </div>
  );
 }
 

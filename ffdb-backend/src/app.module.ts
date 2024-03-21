@@ -7,9 +7,10 @@ import { UsersModule } from './users/users.module';
 import { TestimoniesModule } from './testimonies/testimonies.module';
 import { StoriesModule } from './stories/stories.module';
 import { AuthModule } from './auth/auth.module';
+import { HerosModule } from './heros/heros.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), DatabaseModule, UsersModule, TestimoniesModule, StoriesModule, AuthModule],
+  imports: [ConfigModule.forRoot(), DatabaseModule, UsersModule, TestimoniesModule, StoriesModule, AuthModule, HerosModule],
   controllers: [AppController],
   providers: [AppService],
 })
