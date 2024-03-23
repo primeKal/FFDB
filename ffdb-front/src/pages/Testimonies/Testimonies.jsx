@@ -47,7 +47,7 @@ function Testimonies() {
     <div id="testimonials">
       <div className="container">
         <div className="section-title text-center">
-          <h2>Take a look at Our Heros</h2>
+          <h2>Take a look at the Testimonies left my our heroes</h2>
         </div>
         <div>
         <div className="logged-in">
