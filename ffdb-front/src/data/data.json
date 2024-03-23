@@ -6,16 +6,14 @@
   "About": {
     "paragraph": "We are a group of young professionals that want to help the world become a better place. We use our technical skills to help register the entire casuality of this world's wars",
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "Fast and Diligent",
+      "Young Professionals",
+      "Direct Victims",
+      "Experienced Software Engineers"
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "Real Desire To Help",
+      "Real Desire To Solve Problems"
     ]
   },
   "Gallery": [
@@ -73,13 +71,13 @@
     },
     {
       "icon": "fa fa-archive",
-      "name": "Stories",
-      "text": "We have a large number of stories for you to browse through, these are real and are the ones that show real goodness in the world."
+      "name": "Stories and Testimonies",
+      "text": "We have a large number of stories for you to browse through."
     },
     {
       "icon": "fa fa-cloud-download",
-      "name": "Testimonies",
-      "text": "Real world accounts of the brutality of war can be read here.It is one of the worst testimonies you would find on the internet, but at least its true."
+      "name": "Real Time Reporting",
+      "text": "We provide real time data through a secure api to our clients that has been recorded by the public"
     },
     {
       "icon": "fa fa-language",
@@ -93,92 +91,92 @@
     },
     {
       "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "name": "Public Training",
+      "text": "We train and give access to our real time data, in order to educate and resolve the current mind set and mentality of war mongering individuals."
     }
   ],
   "Testimonials": [
     {
       "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "text": "\"One of the best ideas I have ever heard, in addition to the implementation, I am amazed at the projects and donations you guys have done. Keep it up.\"",
       "name": "John Doe"
     },
     {
       "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "text": "\"One of the best ideas I have ever heard, in addition to the implementation, I am amazed at the projects and donations you guys have done. Keep it up.\"",
       "name": "Johnathan Doe"
     },
     {
       "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "text": "\"One of the best ideas I have ever heard, in addition to the implementation, I am amazed at the projects and donations you guys have done. Keep it up.\"",
       "name": "John Doe"
     },
     {
       "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "text": "\"One of the best ideas I have ever heard, in addition to the implementation, I am amazed at the projects and donations you guys have done. Keep it up.\"",
       "name": "Johnathan Doe"
     },
     {
       "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "text": "\"One of the best ideas I have ever heard, in addition to the implementation, I am amazed at the projects and donations you guys have done. Keep it up.\"",
       "name": "John Doe"
     },
     {
       "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "text": "\"One of the best ideas I have ever heard, in addition to the implementation, I am amazed at the projects and donations you guys have done. Keep it up.\"",
       "name": "Johnathan Doe"
     }
   ],
   "Team": [
     {
       "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
+      "name": "Kaleb Teshale",
+      "job": "Product Owner/Full Stack Developer"
     },
     {
       "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
+      "name": "Frezer Zewdu",
+      "job": "Advisor"
     },
     {
       "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
+      "name": "Yonas Bekele",
+      "job": "Senior Advisor"
     },
     {
       "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
+      "name": "Sara Mekonen",
+      "job": "Stake Holder"
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
-    "email": "info@company.com",
-    "facebook": "fb.com",
+    "address": "4321 Akaki Kality, Wereda 08, 681",
+    "phone": "+251925499376",
+    "email": "kalebteshale72@gmail.com",
+    "facebook": "fb.com/kalu_teshale",
     "twitter": "twitter.com",
     "youtube": "youtube.com"
   },
   "Features": [
     {
       "icon": "fa fa-comments-o",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Hero Registration",
+      "text": "Heros need to be remembered and we need some where to store their amazing stories.."
     },
     {
       "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "A Hero's Story",
+      "text": "We have a large number of stories for you to browse through, these are real and are the ones that show real goodness in the world."
     },
     {
       "icon": "fa fa-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "A Hero's Testimony",
+      "text": "Real world accounts of the brutality of war can be read here.It is one of the worst testimonies you would find on the internet, but at least its true."
     },
     {
       "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Project Management",
+      "text": "Allows the user to manage his/her projects and donation links."
     }
   ]
 }
