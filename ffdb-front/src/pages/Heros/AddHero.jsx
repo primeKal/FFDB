@@ -20,7 +20,7 @@ function AddHero(props) {
     occupation: '',
     age: '',
   });
-  const fontSize = 20
+  const fontSize = 20;
 
   const handleChange = (event) => {
     setHero({
@@ -43,6 +43,8 @@ function AddHero(props) {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
+      props.getHeros();
+      props.closeModal();
       return response.json();
     })
     .then(data => {
@@ -79,8 +81,8 @@ function AddHero(props) {
         </form>
       </DialogContent>
       <DialogActions>
-        <Button variant="contained" onClick={props.closeModal}>Cancel</Button>
-        <Button variant="contained" color="primary" onClick={handleSubmit}>Add Hero</Button>
+        <Button variant="contained" style={{ fontSize: '15px' }} onClick={props.closeModal}>Cancel</Button>
+        <Button variant="contained" style={{ fontSize: '15px' }} color="primary" onClick={handleSubmit}>Add Hero</Button>
       </DialogActions>
     </Dialog>
   );

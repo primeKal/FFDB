@@ -39,6 +39,11 @@
    .login-form button:hover {
     background-color: #0056b3;
    }
+   .error-message {
+      color: red;
+      font-weight: bold;
+      padding: 10px;
+    }
    
    /* Responsive design for smaller screens */
    @media only screen and (max-width: 480px) {

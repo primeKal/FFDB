@@ -24,6 +24,7 @@ function Login() {
  const handleSubmit = (event) => {
     event.preventDefault();
 
+    setError("")
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
@@ -68,6 +69,7 @@ function Login() {
       <div>
         Or <Link to="/signup">Sign Up</Link>
       </div>
+      {error && <div className="error-message">{error}</div>}
     </form>
   </div>
  );

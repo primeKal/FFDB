@@ -6,7 +6,10 @@ import {
     CreatedAt,
     UpdatedAt,
     DeletedAt,
+    HasMany
 } from 'sequelize-typescript';
+import { Story } from 'src/stories/stories.entity';
+import { Testimony } from 'src/testimonies/testimonyies.entity';
 import { HERO_OCCUPATION } from 'src/utils/constants';
 
 
@@ -69,5 +72,10 @@ export class Hero extends Model<Hero> {
     @DeletedAt public deletedAt: Date;
 
     // foreign keys
+    @HasMany(() => Testimony)
+    testimonies: Testimony[]
+
+    @HasMany(() => Story)
+    stories: Story[]
 
 }

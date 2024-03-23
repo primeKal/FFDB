@@ -1,49 +1,38 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import AddHero from './AddHero';
+import { baseUrl } from '../../EndPoints';
 
 function Heros() {
   const [data, setData] = React.useState([])
-  const demo_data =    [
-    {
-      "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    },
-    {
-      "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    },
-    {
-      "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    }
-  ]
+  const images = [
+    "img/testimonials/01.jpg",
+    "img/testimonials/02.jpg",
+    "img/testimonials/03.jpg",
+    "img/testimonials/04.jpg",
+    "img/testimonials/05.jpg",
+    "img/testimonials/06.jpg",
+  ];
+
   const isLoggedIn = useSelector(state => state.loggedInStatus.isLoggedIn);
   const userData = useSelector(state => state.loggedInStatus.userData);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
+  
+
+  useEffect(() => { 
+    getHeros()
+  }, [])
   const getHeros = async () => {
     try {
-      const response = await fetch('http://localhost:5000/heros')
+      setSearchTerm("")
+      const response = await fetch(baseUrl + 'heros')
       const data = await response.json()
+      data.forEach(element => {
+        element.img = Math.floor(Math.random() * images.length)
+      });
+      console.log("my name", data)
       setData(data)
     } catch (error) {
       console.error(error)
@@ -60,13 +49,21 @@ function Heros() {
         </div>
         <div>
         <div className="logged-in">
-          <input className="search-input"></input>
-          <a
-            href="#services"
-            className="btn btn-custom btn-lg page-scroll"
-          >
-            Search
-          </a>
+          <input 
+                className="search-input" 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder='Search ...'
+                style={{
+                  borderRadius: '15px',
+                  border: '1px solid #ccc',
+                  padding: '10px',
+                  fontSize: '16px',
+                  width: '200px',
+                  outline: 'none',
+                  boxShadow: '0px 0px 5px 2px rgba(0,0,0,0.1)'
+                }}
+                ></input>
           {
             isLoggedIn && 
             // <div className="logged-in">
@@ -82,16 +79,19 @@ function Heros() {
         </div>
         </div>
         <div className="row flex-end">
-          {demo_data
-            ? demo_data.map((d, i) => (
+          {data.length > 0
+            ? data
+            .filter(d => d.name.toLowerCase().includes(searchTerm.toLowerCase()))
+              .map((d, i) => (
                 <div key={`${d.name}-${i}`} className="col-md-4">
                   <div className="testimonial">
                     <div className="testimonial-image">
                       {" "}
-                      <img src={d.img} alt="" />{" "}
+                      <img src={images[d.img]} alt="" />{" "}
                     </div>
                     <div className="testimonial-content">
-                      <p>"{d.text}"</p>
+                      <p>"{d.description}"</p>
+                      <p>{d.occupation}</p>
                       <div className="testimonial-meta"> - {d.name} </div>
                     </div>
                   </div>
@@ -100,7 +100,7 @@ function Heros() {
             : "loading"}
         </div>
       </div>
-      {isModalOpen && (<AddHero isOpen={isModalOpen} closeModal={closeModal}></AddHero>)}
+      {isModalOpen && (<AddHero isOpen={isModalOpen} closeModal={closeModal} getHeros={getHeros}></AddHero>)}
     </div>
   )
 }

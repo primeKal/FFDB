@@ -7,7 +7,10 @@ import {
     CreatedAt,
     UpdatedAt,
     DeletedAt,
+    BelongsTo,
+    ForeignKey,
 } from 'sequelize-typescript';
+import { Hero } from 'src/heros/heros.entity';
 
 
 const tableOptions = {
@@ -30,6 +33,11 @@ export class Testimony extends Model<Testimony> {
     })
     name: string;
 
+    @Column({
+        allowNull: false,
+    })
+    description: string;
+
     @CreatedAt public createdAt: Date;
 
     @UpdatedAt public updatedAt: Date;
@@ -37,5 +45,10 @@ export class Testimony extends Model<Testimony> {
     @DeletedAt public deletedAt: Date;
 
     // foreign keys
+    @ForeignKey(() => Hero)
+    heroId: number
+
+    @BelongsTo(() => Hero)
+    hero: Hero
 
 }
