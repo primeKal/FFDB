@@ -14,7 +14,7 @@ import { baseUrl } from '../../EndPoints';
 
 function AddTestimony(props) {
   const [testimony, setTestimony] = useState({
-    title: '',
+    name: '',
     hero: '',
     description: '',
   });
@@ -71,7 +71,7 @@ function AddTestimony(props) {
       </DialogTitle>
       <DialogContent>
         <form onSubmit={handleSubmit}>
-          <TextField name="title" label="Title" value={testimony.title} onChange={handleChange} variant="outlined" fullWidth inputProps={{ style: { fontSize: fontSize } }} InputLabelProps={{ style: { fontSize: fontSize } }} margin="normal"/>
+          <TextField name="name" label="Title" value={testimony.name} onChange={handleChange} variant="outlined" fullWidth inputProps={{ style: { fontSize: fontSize } }} InputLabelProps={{ style: { fontSize: fontSize } }} margin="normal"/>
           <FormControl variant="outlined" fullWidth margin="normal">
             <InputLabel id="hero-label" style={{ fontSize: fontSize }}>Hero</InputLabel>
             <Select labelId="hero-label" name="hero" value={testimony.hero} onChange={handleChange}>
