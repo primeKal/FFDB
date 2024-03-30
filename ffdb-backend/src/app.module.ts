@@ -10,7 +10,13 @@ import { AuthModule } from './auth/auth.module';
 import { HerosModule } from './heros/heros.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), DatabaseModule, UsersModule, TestimoniesModule, StoriesModule, AuthModule, HerosModule],
+  imports: [ConfigModule.forRoot(),
+    DatabaseModule,
+    UsersModule,
+    TestimoniesModule,
+    StoriesModule,
+    AuthModule,
+    HerosModule],
   controllers: [AppController],
   providers: [AppService],
 })

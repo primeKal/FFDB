@@ -43,7 +43,7 @@ function AddTestimony(props) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(testimony),
+      body: JSON.stringify({...testimony, heroId: parseInt(testimony.hero)}),
     })
     .then(response => {
       if (!response.ok) {
