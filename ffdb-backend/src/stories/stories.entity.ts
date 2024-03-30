@@ -33,6 +33,11 @@ export class Story extends Model<Story> {
     })
     name: string;
 
+    @Column({
+        allowNull: true,
+    })
+    description: string;
+
     @CreatedAt public createdAt: Date;
 
     @UpdatedAt public updatedAt: Date;
